@@ -15,7 +15,8 @@ printf("\nEnter total Details of Process[%d]\n", i + 1); printf("Arrival Time:\t
 scanf("%d", &a_time[i]); printf("Burst Time:\t"); scanf("%d", &b_time[i]); temp[i] = b_time[i];
 }
 printf("\nEnter the Time Quantum:"); scanf("%d", &time_quantum);
-printf("\nProcess ID\t\tBurst Time\t Turnaround Time\t Waiting Time\t Priority\n"); for(total = 0, i = 0; x != 0;)
+printf("\nProcess ID\t\tBurst Time\t Turnaround Time\t Waiting Time\t Priority\n");
+for(total = 0, i = 0; x != 0)
 {
 for(z=0;z<limit;z++)
 {
