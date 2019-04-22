@@ -18,12 +18,13 @@ scanf("%d", &a_time[i]); printf("Burst Time:\t"); scanf("%d", &b_time[i]); temp[
 printf("\nEnter the Time Quantum:"); scanf("%d", &time_quantum);
 
 printf("\nProcess ID\t\tBurst Time\t Turnaround Time\t Waiting Time\t Priority\n"); for(total = 0, i = 0; x != 0;)
-{
-
 for(z=0;z<limit;z++)
 {
 int temp1; pos=z;
 for(j=z+1;j<limit;j++)
+{
+if(prio[j]<prio[pos]) pos=j;
+}
 
 temp1=prio[z]; prio[z]=prio[pos]; prio[pos]=temp1;
 temp1=b_time[z]; b_time[z]=b_time[pos]; b_time[pos]=temp1;
